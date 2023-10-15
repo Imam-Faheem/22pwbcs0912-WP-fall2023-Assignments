@@ -28,8 +28,48 @@ height: 120px;
 .trustedBy img{
     width: 12%;
     height: auto;
-
+    transform: scale(0);
+    animation-fill-mode: forwards;
 }
+.trustedBy img:nth-child(1) {
+    animation: scaleUp 4s 1.2s forwards;
+  }
+  
+  .trustedBy img:nth-child(2) {
+    animation: scaleUp 4s 2s forwards;
+  }
+  
+  .trustedBy img:nth-child(3) {
+    animation: scaleUp 4s 3s forwards;
+  }
+  
+  .trustedBy img:nth-child(4) {
+    animation: scaleUp 4s 4s forwards;
+  }
+  
+  .trustedBy img:nth-child(5) {
+    animation: scaleUp 4s 4.8s forwards;
+
+  }
+  
+  @keyframes scaleUp {
+    0% {
+      transform: scale(0);
+      opacity: 50%;
+    }
+    30% {
+      transform: scale(1.2);
+
+    }
+    70% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  
 @media screen and (max-width:850px){
     .trustedBy img{
         width: 16%;
@@ -81,7 +121,6 @@ height: 120px;
     height: fit-content;
     letter-spacing: 0.8px;
     word-spacing: 5px;
-
 }
 .IntoText h4{
     margin: 15px 0px;

@@ -37,9 +37,7 @@ nav {
 
   }
   
-  .scrolled .nav-links li a {
-    color: #000; 
-  }
+ 
   .scrolled .logo {
     color: #000; 
   }
@@ -124,7 +122,18 @@ li:hover .linee {
     opacity: 1; 
   }
 
- 
+  .scrolled .nav-links li {
+  }
+
+  .scrolled .nav-links li a {
+    color: #000000; 
+  }
+
+  .nav-links li  {
+   
+    color: #000000;
+
+}
 
 .nav-links li a {
     text-decoration: none;
@@ -138,6 +147,7 @@ li:hover .linee {
     color: #ffffff;
 
 }
+
 
 
 
@@ -193,6 +203,35 @@ background-color: var(--Darker-secondary-color);
 
 }
 
+.btnHire {
+  animation: wiggle 2s linear infinite;
+}
+
+/* Keyframes */
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
 
 
 
@@ -220,8 +259,13 @@ color: #848484;
 display: none;
 }
 
+
     .menu-icon {
         display: block;
+    }
+    .scrolled .nav-links{
+      background-color: #ffffff;
+
     }
 
     .nav-links {
@@ -231,7 +275,7 @@ display: none;
         top: 50px;
         left: 0;
         right: 0;
-        background-color: #ffffff;
+        background-color: #000000a8;
         text-align: center;
         padding: 30px 20px 80px 20px;
         margin-top: 30px;
@@ -320,9 +364,22 @@ display: none;
     align-items: center;
     justify-content: center;
     background-attachment: fixed;
-background-color: #497b9a;
+background-color: #000000;
 
     
+}
+.hero {
+  opacity: 0.5;
+  animation: fadeIn 1s forwards; 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 
@@ -330,11 +387,11 @@ background-color: #497b9a;
     position: relative;
     width: 100%;
     text-align: center;
-   
+    background-color: #000000;
     overflow: hidden;
     
-
 }
+
 
 
 
@@ -355,6 +412,22 @@ background-color: #497b9a;
     background-position: center;
     background-size: cover;
 }
+
+.slide.fade {
+  transform: translateX(-100%);
+  animation: slideInLeft 1s forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+
 
 
 img {
@@ -390,6 +463,22 @@ cursor: pointer;
     color: #ffffff;
     z-index: 1;
     padding: 30% 15%;
+    overflow: hidden; 
+}
+
+.content{
+  transform: translateX(100%);
+  animation: slideInLeft2 1s forwards;
+}
+
+@keyframes slideInLeft2 {
+  from {
+    transform: translateX(-100%);
+    
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .content h1 {
@@ -515,6 +604,7 @@ font-family: Arial, Helvetica, sans-serif;
             top: 146px;
             right: 70px;
         }
+        
 
 
 }
