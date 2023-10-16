@@ -738,6 +738,25 @@ padding: 0%;
     margin-right: 10px;
     transition: 0.3s ease;
   }
+
+  @media (max-width: 568px) {
+    #iconsList{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 0%;
+      
+        }
+        #iconsList li {
+         
+          margin-top: 10px;
+          margin-bottom: 10px;
+          transition: 0.3s ease;
+        }
+  
+  }
   
   #iconsList li:hover {
    transform: scale(1.08);
